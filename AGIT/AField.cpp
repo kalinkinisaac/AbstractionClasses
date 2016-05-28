@@ -4,7 +4,7 @@
 //
 //  Created by Исаак Калинкин  on 28.05.16.
 //  Copyright © 2016 fourteam. All rights reserved.
-//
+// мде кек лол
 
 #include "AField.hpp"
 void AbstractField::BuildEssence()
