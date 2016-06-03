@@ -11,6 +11,21 @@
 
 #include <stdio.h>
 #include <iostream> /*for string*/
+class AbstractIntPoint{
+    const int default_x = 0, default_y = 0;
+public:
+    int x, y;
+    AbstractIntPoint();
+    AbstractIntPoint(int x, int y);
+    void Set(int x, int y);
+    std::string ToString();
+};
+/*Parse section*/
+unsigned int GetDec(char input);//Convert one symbol to decimal
+unsigned int AlphToDec(const std::string& to_convert);//Convert str to dec
+bool InputValidChecker(const std::string& input);
+AbstractIntPoint Parse(const std::string& to_parse);
+
 class AbstractField
 {
 private:
@@ -24,6 +39,7 @@ public:
     AbstractField(int width, int height);
     ~AbstractField();
     int* operator[](int index);
+    int At(AbstractIntPoint point);
     void Fill();
     void Fill(int background);
     int GetWidth();
